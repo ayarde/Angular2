@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<p>Movies List</p>
+<button (click) = "onShowHide(true)" [class.showingData]="showData === true">Show Data</button>
+<button (click) = "onShowHide(false)" [class.showingData]="showData === false">Hide Data</button>
+<ul *ngIf="showData === true">
+  <li>Title:<strong>{{movie.movie}}</strong></li>
+  <li>Director:<strong>{{movie.director}}</strong></li>
+  <li>Year:<strong>{{movie.year}}</strong></li>
+</ul>
+<p>
+  Change Title:
+  <input type="text" (keypress)="debug()" [(ngModel)]="movie.movie"/>
+</p>
