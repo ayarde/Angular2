@@ -1,0 +1,15 @@
+<h2>Create Movie</h2>
+<p>
+  Title:
+  <input type="text" #title value="{{titleMovie}}" />
+</p>
+<p>
+  Director:
+  <input type="text" #director />
+</p>
+<p>
+  Year:
+  <input type="text" #year />
+</p>
+<input type="submit" value="Create Movie" (click)="onCreateMovie(title.value,
+director.value, year.value)"/>

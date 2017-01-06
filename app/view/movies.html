@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+<nav>
+   <ul>
+     <li><a [routerLink]="['Movies']">Start</a></li>
+     <li><a [routerLink]="['CreateMovie']">Add Movie</a></li>
+     <li><a [routerLink]="['Contact']">Contact</a></li>
+   </ul>
+</nav>
+<router-outlet></router-outlet>
+<movies-footer></movies-footer>
