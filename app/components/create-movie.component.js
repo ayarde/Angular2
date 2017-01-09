@@ -1,6 +1,5 @@
-System.register(["angular2/core", "../model/movie", "angular2/router", "../services/movie.service"], function(exports_1, context_1) {
+System.register(["angular2/core", "../model/movie", "angular2/router", "../services/movie.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["angular2/core", "../model/movie", "angular2/router", "../servi
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, movie_1, router_1, movie_service_1;
-    var CreateMovieComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, movie_1, router_1, movie_service_1, CreateMovieComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -25,8 +24,9 @@ System.register(["angular2/core", "../model/movie", "angular2/router", "../servi
             },
             function (movie_service_1_1) {
                 movie_service_1 = movie_service_1_1;
-            }],
-        execute: function() {
+            }
+        ],
+        execute: function () {
             CreateMovieComponent = (function () {
                 function CreateMovieComponent(movieService, router, routeParams) {
                     this.movieService = movieService;
@@ -42,17 +42,18 @@ System.register(["angular2/core", "../model/movie", "angular2/router", "../servi
                 CreateMovieComponent.prototype.ngOnInit = function () {
                     this.titleMovie = this.routeParams.get("title");
                 };
-                CreateMovieComponent = __decorate([
-                    core_1.Component({
-                        templateUrl: "app/view/create-movie.html",
-                        providers: [movie_service_1.MovieService]
-                    }), 
-                    __metadata('design:paramtypes', [movie_service_1.MovieService, router_1.Router, router_1.RouteParams])
-                ], CreateMovieComponent);
                 return CreateMovieComponent;
             }());
+            CreateMovieComponent = __decorate([
+                core_1.Component({
+                    templateUrl: "app/view/create-movie.html",
+                    providers: [movie_service_1.MovieService]
+                }),
+                __metadata("design:paramtypes", [movie_service_1.MovieService, router_1.Router,
+                    router_1.RouteParams])
+            ], CreateMovieComponent);
             exports_1("CreateMovieComponent", CreateMovieComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=create-movie.component.js.map
