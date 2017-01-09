@@ -50,7 +50,7 @@ System.register(["angular2/core", "./components/movies-list.component", "./compo
                         { path: "/movies", name: "Movies", component: movies_list_component_1.MoviesListComponent,
                             useAsDefault: true },
                         { path: "/create-movie", name: "CreateMovie", component: create_movie_component_1.CreateMovieComponent },
-                        { path: "/create-movie/:title", name: "CreateMovieBaseOther",
+                        { path: "/create-movie/:title/:director/:year", name: "CreateMovieBaseOther",
                             component: create_movie_component_1.CreateMovieComponent },
                         { path: "/contact", name: "Contact", component: contact_component_1.ContactComponent }
                     ]), 

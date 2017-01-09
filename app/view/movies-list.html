@@ -20,7 +20,9 @@
     Title:<strong>{{movie.movie}}</strong></li>
     <li>Director:<strong>{{movie.director}}</strong></li>
     <li *ngIf="movie.year">Year:<strong>{{movie.year}}</strong></li>
-    <li><a [routerLink]="['CreateMovieBaseOther', {title: movie.movie}]">
+    <li><a [routerLink]="['CreateMovieBaseOther', {title: movie.movie,
+                                                   director:movie.director,
+                                                   year:movie.year}]">
     Add Movie base in its</a></li>
   </ul>
 </ul>

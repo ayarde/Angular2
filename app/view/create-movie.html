@@ -1,15 +1,23 @@
 <h2>Create Movie</h2>
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
 <p>
   Title:
-  <input type="text" #title value="{{titleMovie}}" />
+  <input type="text" #title="ngForm" ngControl="title"
+    [(ngModel)]="newMovie.movie" required minlength="4"/>
+    <span *ngIf="!title.valid">No valided</span>
 </p>
 <p>
   Director:
-  <input type="text" #director />
+  <input type="text" #director="ngForm" ngControl="director"
+    [(ngModel)]="newMovie.director" required pattern="[A-Za-z]"/>
+    <span *ngIf="!director.valid">No valided</span>
 </p>
 <p>
   Year:
-  <input type="text" #year />
+  <input type="text" #year="ngForm" ngControl="year"
+    [(ngModel)]="newMovie.year" required pattern="[0-9]{4}"/>
+    <span *ngIf="!year.valid">No valided</span>
 </p>
-<input type="submit" value="Create Movie" (click)="onCreateMovie(title.value,
-director.value, year.value)"/>
+<input type="submit" value="Create Movie" [disabled]="!myForm.form.valid" />
+</form>
